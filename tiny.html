@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny</title>
+    <script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
+    <style>
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <p><b>Tranquilo?</b></p>
+    <br>
+    <div>
+        <p><b>Descrição</b></p>
+        <textarea id="textarea" name="descricao"></textarea>
+    </div>
+    <script>
+        tinymce.init({
+            selector: "#textarea",
+            plugins: 'anchor autolink link lists image code advcode mergetags wordcount template',
+            toolbar: 'undo redo | blocks | bold italic strikethrough backcolor | link image | align bullist numlist | code | template',
+            menubar: true,
+
+            min_height: 900,
+            templates: [
+                {
+                    title: 'São Paulo FC maior do Brasil!',
+                    description:
+                        'São Paulo foi campeão em 2023, conquistando o título da copa do Brasil',
+                    content:
+                        '<p>Parabéns {$owner_name}!</p>' +
+                        '<p>O seu time {$time_name} conquistou a {$achievement}.</p>' +
+                        '<p>Se tornando campeão de tudo!</p>' +
+                        '<p>Saudações, <br>The 2024 congratulations<br><span class="created-date" style="font-size:0.7rem;">[created date]</span></p>' +
+                        '<img src="img/spfc.jpg" height="600" widht="600" alt="SPFC">'
+                },
+
+                {
+                    title: 'Xbox é o melhor console da geração',
+                    description:
+                        'Xbox Series X é o console mais potente da geração',
+                    content:
+                        '<p>O Xbox Series X é o console mais potente da geração possuindo 12 Teraflops</p>' +
+                        '<p>Roda os jogos em verdadeiro 4K podendo otimizar até 120 fps</p>' +
+                        '<p>Tendo seus gráficos um dos mais lindos da geração</p>' +
+                        '<img src="img/xbox.png" alt="Xbox" height="500" width="700">'
+                }
+
+            ],
+
+            template_replace_values: {
+                owner_name: 'Lucas',
+                time_name: 'São Paulo FC',
+                achievement: 'Copa do Brasil 2023'
+            },
+
+            template_cdate_classes: 'created-date',
+            template_cdate_format: '%A %d %B %Y'
+
+        });
+    </script>
+</body>
+
+</html>
