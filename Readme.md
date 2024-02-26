@@ -1,3 +1,3 @@
 Exemplo utilizando o TinyMCE !
 
-Messi 🐐
+Lionel Messi The Goat !
