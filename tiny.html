@@ -7,18 +7,32 @@
     <title>Tiny</title>
     <script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
     <style>
-        p {
+        body {
+            background-color: #00000080;
+            margin: 0;
+            padding: 10px;
             font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
             font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+        }
+
+        b {
+            color: #000000
         }
     </style>
 </head>
 
 <body>
-    <p><b>Tranquilo?</b></p>
-    <br>
     <div>
-        <p><b>Descrição</b></p>
+        <h1><b>Editor TinyMCE</b></h1>
         <textarea id="textarea" name="descricao"></textarea>
     </div>
     <script>
