@@ -8,7 +8,7 @@
     <script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
     <style>
         body {
-            background-color: #00000080;
+            background-color: #00000031;
             margin: 0;
             padding: 10px;
             font-family: Arial, Helvetica, sans-serif;
@@ -41,6 +41,8 @@
             plugins: 'anchor autolink link lists image code advcode mergetags wordcount template',
             toolbar: 'undo redo | blocks | bold italic strikethrough backcolor | link image | align bullist numlist | code | template',
             menubar: true,
+            noneditable_class: 'nonedit',
+            editable_class: 'editclass',
 
             min_height: 900,
             templates: [
@@ -49,12 +51,12 @@
                     description:
                         'São Paulo foi campeão em 2023, conquistando o título da copa do Brasil',
                     content:
-                        '<p>Parabéns {$owner_name}!</p>' +
-                        '<p>O seu time <b>{$time_name}</b> conquistou a {$achievement}</p>' +
-                        '<p>E em 2024 conquistou a Supercopa do Brasil</p>' +
-                        '<p>Se tornando campeão de tudo!</p>' +
-                        '<p>Saudações, <br>The 2024 congratulations<br><span class="created-date" style="font-size:0.7rem;">[created date]</span></p>' +
-                        '<img src="img/spfc.jpg" height="600" widht="600" alt="SPFC">'
+                        '<p class="nonedit">Parabéns {$owner_name}!</p>' +
+                        '<p class="nonedit">O seu time <b>{$time_name}</b> conquistou a {$achievement}</p>' +
+                        '<p class="nonedit">E em 2024 conquistou a Supercopa do Brasil</p>' +
+                        '<p class="nonedit">Se tornando campeão de tudo!</p>' +
+                        '<p class="nonedit">Saudações, <br>The 2024 congratulations<br><span class="created-date" style="font-size:0.7rem;">[created date]</span></p>' +
+                        '<img class="nonedit" src="img/spfc.jpg" height="600" widht="600" alt="SPFC">'
                 },
 
                 {
@@ -62,10 +64,10 @@
                     description:
                         'Xbox Series X é o console mais potente da geração',
                     content:
-                        '<p>O <b>Xbox Series X</b> é o console mais potente da geração possuindo 12 Teraflops</p>' +
-                        '<p>Roda os jogos em verdadeiro 4K podendo otimizar até 120 fps</p>' +
-                        '<p>Tendo seus gráficos um dos mais lindos da geração</p>' +
-                        '<img src="img/xbox.png" alt="Xbox" height="500" width="700">'
+                        '<p class="nonedit">O <b>Xbox Series X</b> é o console mais potente da geração possuindo 12 Teraflops</p>' +
+                        '<p class="nonedit">Roda os jogos em verdadeiro 4K podendo otimizar até 120 fps</p>' +
+                        '<p class="nonedit">Tendo seus gráficos um dos mais lindos da geração</p>' +
+                        '<img class="nonedit" src="img/xbox.png" alt="Xbox" height="500" width="700">'
                 },
 
                 {
@@ -73,10 +75,48 @@
                     description:
                         'Lionel Messi The GOAT',
                     content:
-                        '<p><b>Lionel Messi</b>, o melhor jogador de todos os tempos, o mais habilidoso, genial e vencedor que o mundo já viu' +
-                        '<p>Conta com 822 Gols em 1049 Jogos</p>' +
-                        '<p>E tem como principal conquista a Copa do Mundo de 2022</p>' +
-                        '<img src="img/lionel.png" alt="Messi" height="400" width="400">'
+                        '<p class="nonedit"><b>Lionel Messi</b>, o melhor jogador de todos os tempos, o mais habilidoso, genial e vencedor que o mundo já viu' +
+                        '<p class="nonedit">1049 Jogos | 822 Gols | 362 Assistências</p>' +
+                        '<p class="nonedit">Barcelona: 778 Jogos | 672 Gols</p>' +
+                        '<p class="nonedit">Argentina: 180 Jogos | 106 Gols</p>' +
+                        '<p class="nonedit">PSG: 74 Jogos | 32 Gols</p>' +
+                        '<p class="nonedit">Inter Miami: 16 Jogos | 12 Gols</p>' +
+                        '<img src="img/lionel.png" alt="Messi" height="400" width="400">' +
+                        '<p class="nonedit">E tem como principal conquista a Copa do Mundo de 2022</p>' +
+                        '<p class="nonedit">Atualizado em 28/02/24</p>'
+                },
+
+                {
+                    title: 'The 2nd GOAT',
+                    description:
+                        'Cristiano Ronaldo the 2nd GOAT',
+                    content:
+                        '<p class="nonedit"><b>Crisitano Ronaldo</b>, o jogador mais decisivo que o mundo já viu' +
+                        '<p class="nonedit">1210 Jogos | 877 Gols</p>' +
+                        '<p class="nonedit">Sporting: 31 Jogos | 5 Gols</p>' +
+                        '<p class="nonedit">Sporting B: 2 Jogos | 0 Gols</p>' +
+                        '<p class="nonedit">Manchester United: 346 Jogos | 145 Gols</p>' +
+                        '<p class="nonedit">Real Madrid: 438 Jogos | 450 Gols</p>' +
+                        '<p class="nonedit">Juventus: 134 Jogos | 101 Gols</p>' +
+                        '<p class="nonedit">Portugal: 205 Jogos | 128 Gols</p>' +
+                        '<img src="img/cr7.png" alt="Cristiano Ronaldo" height="350" width="450">' +
+                        '<p class="nonedit">Atualizado em 28/02/24</p>'
+                },
+
+                {
+                    title: 'Neymar Jr',
+                    description:
+                        'Neymar Jr, uma das grandes estrelas do Brasil',
+                    content:
+                        '<p class="nonedit"><b>Neymar Jr</b>, um dos jogadores mais talentosos que o mundo já viu' +
+                        '<p class="nonedit">717 Jogos | 439 Gols</p>' +
+                        '<p class="nonedit">Santos: 225 Jogos | 136 Gols</p>' +
+                        '<p class="nonedit">Barcelona: 186 Jogos | 105 Gols</p>' +
+                        '<p class="nonedit">PSG: 173 Jogos | 118 Gols</p>' +
+                        '<p class="nonedit">Al Hilal: 5 Jogos | 1 Gols</p>' +
+                        '<p class="nonedit">Brasil: 128 Jogos | 79 Gols</p>' +
+                        '<img src="img/neymar.png" alt="Neymar" height="450" width="405">' +
+                        '<p class="nonedit">Atualizado em 28/02/24</p>'
                 }
             ],
 
