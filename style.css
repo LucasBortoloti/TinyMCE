@@ -1,0 +1,20 @@
+footer {
+    bottom: 0px;
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid #000000;
+}
+
+header {
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+body {
+    text-align: center;
+}
+
+.img {
+    display: inline-block;
+}
