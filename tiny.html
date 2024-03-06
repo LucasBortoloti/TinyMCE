@@ -150,6 +150,7 @@
                     description:
                         'PDF teste',
                     content:
+                        '<link rel="stylesheet" type="text/css" href="style.css">' +
                         '<div class="nonedit">' +
                         '<div class="header">' +
                         '<table class="customform" style="width:95%">' +
@@ -223,6 +224,10 @@
 
             template_cdate_classes: 'created-date',
             template_cdate_format: '%A %d %B %Y'
+
+            /*função para usar no console do navegador para puxar o html gerado pelo TinyMCE
+            tinymce.activeEditor.getContent("textarea");
+            */
 
         });
     </script>
