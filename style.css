@@ -1,9 +1,9 @@
 .header {
+    position: fixed;
     width: 100%;
     background: #fff;
     z-index: 9999;
     max-width: 1140px;
-    position: fixed;
     display: block;
 }
 
@@ -42,9 +42,10 @@ caption {
     background-color: #023b53;
 }
 
-.imagem {
-    max-width: 400px;
-    max-height: 400px;
+.img {
+    padding: 126px;
+    max-width: 450px;
+    max-height: 450px;
 }
 
 .formfield {
@@ -90,6 +91,7 @@ caption {
     padding: 8px;
 }
 
+/*
 .footer {
     width: 100%;
     background: #fff;
@@ -103,6 +105,7 @@ caption {
     border-top: 1px solid #000000;
     padding: 8px;
 }
+*/
 
 @page {
     font-family: sans-serif;
@@ -112,9 +115,11 @@ caption {
     counter-increment: page;
 }
 
+/*
 .footer::after {
     content: counter(page);
 }
+*/
 
 .customform td.bordash {
     border-bottom: 1px solid #000000;
