@@ -1,10 +1,44 @@
-.header {
+@page {
+    margin: 0cm 0cm;
+    font-family: sans-serif;
+    size: A4 portrait;
+    counter-increment: page;
+}
+
+/** Define now the real margins of every page in the PDF **/
+body {
+    margin-top: 2.0cm;
+    /*caso queira um header maior é só aumentar o tamanho aqui, e aumentar o heigth do header*/
+    margin-left: 2cm;
+    margin-right: 2cm;
+    margin-bottom: 2cm;
+}
+
+/** Define the header rules **/
+header {
     position: fixed;
-    width: 100%;
-    background: #fff;
-    z-index: 9999;
-    max-width: 1140px;
-    display: block;
+    top: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 1.8cm;
+    background-color: #023b53;
+    color: white;
+    text-align: center;
+    line-height: 1.5cm;
+}
+
+/** Define the footer rules **/
+footer {
+    position: fixed;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 2cm;
+    margin-bottom: -35px;
+    padding: 12px;
+    text-align: right;
+    border-top: 1px solid #000000;
+
 }
 
 .customform {
@@ -21,49 +55,6 @@
     /* esse border-collapse é o responsável pelas bordas ficarem completas e sem sobras entre uma e outra*/
 }
 
-.cabecalho {
-    font-family: 'Arial', sans-serif;
-    border-radius: 1px;
-    box-shadow: 0 2px 4px #00000033;
-    font-size: 18px;
-    width: 100%;
-    background: #ffffff;
-    border: 1px solid #000;
-    margin-top: 20px;
-    padding: 8px;
-}
-
-caption {
-    font-size: 18px;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    padding: 10px;
-    color: #ffffff;
-    background-color: #023b53;
-}
-
-.img {
-    padding: 126px;
-    max-width: 450px;
-    max-height: 450px;
-}
-
-.formfield {
-    background: #e1e0e0;
-    border: 1px solid #000;
-    color: #000000;
-    border-radius: 3px;
-    height: 34px;
-    display: block;
-    padding: 8px;
-    width: 94%;
-    box-sizing: border-box;
-}
-
-.content {
-    margin-top: 160px;
-}
-
 .customform td.sectiontitle {
     padding: 6px;
     text-decoration: none;
@@ -73,53 +64,6 @@ caption {
     background: #023b53;
     border-radius: 0;
 }
-
-.customform td.bordasl {
-    padding: 6px;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 8px;
-    border-bottom: 1px solid #000000;
-    border-left: 1px solid #000000;
-    background: #023b53;
-}
-
-.customform td.rodape {
-    border-left: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    border-right: 1px solid #000000;
-    padding: 8px;
-}
-
-/*
-.footer {
-    width: 100%;
-    background: #fff;
-    z-index: 9999;
-    max-width: 1140px;
-    position: fixed;
-    display: block;
-    bottom: 0px;
-    text-align: right;
-    margin-bottom: -40px;
-    border-top: 1px solid #000000;
-    padding: 8px;
-}
-*/
-
-@page {
-    font-family: sans-serif;
-    size: A4 portrait;
-    margin-top: 100px;
-    margin-bottom: 70px;
-    counter-increment: page;
-}
-
-/*
-.footer::after {
-    content: "Página " counter(page);
-}
-*/
 
 .customform td.bordash {
     border-bottom: 1px solid #000000;
@@ -137,7 +81,30 @@ caption {
     color: white;
 }
 
-body {
-    width: 100%;
-    height: 950px;
+.customform td.rodape {
+    border-left: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    padding: 8px;
+}
+
+.customform td.bordasl {
+    padding: 6px;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 8px;
+    border-bottom: 1px solid #000000;
+    border-left: 1px solid #000000;
+    background: #023b53;
+}
+
+.img {
+    max-width: 68px;
+    max-height: 68px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer::after {
+    content: "Página " counter(page);
 }
