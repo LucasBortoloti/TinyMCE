@@ -117,7 +117,7 @@ caption {
 
 /*
 .footer::after {
-    content: counter(page);
+    content: "Página " counter(page);
 }
 */
 
