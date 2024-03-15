@@ -1,5 +1,5 @@
 @page {
-    margin: 0cm 0cm;
+    margin: 0cm 0cm 0cm;
     font-family: sans-serif;
     size: A4 portrait;
     counter-increment: page;
@@ -38,7 +38,6 @@ footer {
     padding: 12px;
     text-align: right;
     border-top: 1px solid #000000;
-
 }
 
 .customform {
