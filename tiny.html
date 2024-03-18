@@ -150,7 +150,6 @@
                     description:
                         'PDF teste',
                     content:
-                        '<div class="nonedit">' +
                         '<html>' +
                         '<head>' +
                         '</head>' +
@@ -314,6 +313,69 @@
                         '                        <td class="bordash" align="center">R$ 3800,00</td>' +
                         '                        <td class="bordash" align="center">R$ 3800,00' +
                         '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
+                        '                    <tr>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">Xbox Series X</td>' +
+                        '                        <td class="bordash" align="center">1</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00</td>' +
+                        '                        <td class="bordash" align="center">R$ 3800,00' +
+                        '                        </td>' +
                         '                    </tr>' +
                         '                    <td class="bordasss" colspan="4" align="center"><strong>Total de Vendas</strong>:' +
                         '                    </td>' +
@@ -343,17 +405,15 @@
                         '</html>'
                 },
 
+                /*função para usar no console do navegador para puxar o html gerado pelo TinyMCE
+                tinymce.activeEditor.getContent("textarea");
+                */
+
                 /*Puxar o css pro html q vem do Tiny:
                 <link rel="stylesheet" href="style.css">
                 */
 
-                /* Não funcionou, precisa testar mais para ver se funciona
-                {
-                    title: 'Template com header e footer',
-                    description: 'Exemplo de header e footer',
-                    url: 'templates/headerfooter.html'
-                }
-                */
+                /*Apagar os \n e o '', e adicionar o <body></body> no html que foi gerado a partir do conteudo do tiny*/
 
             ],
 
@@ -365,10 +425,6 @@
 
             template_cdate_classes: 'created-date',
             template_cdate_format: '%A %d %B %Y'
-
-            /*função para usar no console do navegador para puxar o html gerado pelo TinyMCE
-            tinymce.activeEditor.getContent("textarea");
-            */
 
         });
     </script>
