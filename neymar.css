@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    position: fixed;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 2cm;
+    margin-bottom: -35px;
+    padding: 8px;
+    text-align: right;
+    border-top: 1px solid #000000;
+
+}
