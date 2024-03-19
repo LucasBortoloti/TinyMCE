@@ -14,7 +14,6 @@ body {
     margin-bottom: 2cm;
 }
 
-/** Define the header rules **/
 header {
     position: fixed;
     top: 0cm;
@@ -27,7 +26,6 @@ header {
     line-height: 1.5cm;
 }
 
-/** Define the footer rules **/
 footer {
     position: fixed;
     bottom: 0cm;
