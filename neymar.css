@@ -1,5 +1,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2.3cm;
+    /*caso queira um header maior é só aumentar o tamanho aqui, e aumentar o heigth do header*/
+    margin-left: 2cm;
+    margin-right: 2cm;
+    margin-bottom: 2cm;
 }
 
 footer {
@@ -7,15 +12,32 @@ footer {
     bottom: 0cm;
     left: 0cm;
     right: 0cm;
-    height: 2cm;
+    height: 1.4cm;
     margin-bottom: -35px;
-    padding: 8px;
+    padding: 6px;
     text-align: right;
     border-top: 1px solid #000000;
 
 }
 
-.image {
-    min-width: 400px;
-    max-height: 450px;
+.ney {
+    font-size: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 1.8cm;
+    background-color: #000000d1;
+    color: white;
+    text-align: center;
+    line-height: 0.7cm;
+}
+
+img {
+    min-width: 480px;
+    max-height: 520px;
+    padding: 50px;
 }
