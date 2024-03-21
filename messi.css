@@ -1,14 +1,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 0.6cm;
+    margin-top: 1.7cm;
     /*caso queira um header maior é só aumentar o tamanho aqui, e aumentar o heigth do header*/
     margin-bottom: 0cm;
-    background-color: #a50045;
+    background-color: #26759aeb;
     text-align: center;
-    padding: 20px;
+    padding: 1px;
     border-radius: 0.1cm;
     color: #ffffff;
-    font-size: 17px;
+    font-size: 18.5px;
 }
 
 /*
@@ -27,7 +27,7 @@ footer {
 }
 */
 
-.ney {
+.lionel {
     font-size: 22px;
 }
 
@@ -37,15 +37,14 @@ header {
     left: 0cm;
     right: 0cm;
     height: 1.8cm;
-    background-color: #004c98;
+    background-color: #0f5170;
     color: white;
     text-align: center;
     line-height: 0.7cm;
 }
 
-img {
-    width: 400;
-    height: 350px;
-    padding: 70px;
-    border-radius: 1cm;
+.messi {
+    width: 480px;
+    height: 330px;
+    padding: 50px;
 }

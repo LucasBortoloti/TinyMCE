@@ -7,7 +7,7 @@
 
 /** Define now the real margins of every page in the PDF **/
 body {
-    margin-top: 2cm;
+    margin-top: 3.5cm;
     /*caso queira um header maior é só aumentar o tamanho aqui, e aumentar o heigth do header*/
     margin-left: 2cm;
     margin-right: 2cm;
@@ -16,21 +16,21 @@ body {
 
 header {
     position: fixed;
-    top: 0cm;
-    left: 0cm;
-    right: 0cm;
-    height: 1.8cm;
+    top: 1cm;
+    left: 1cm;
+    right: 1cm;
+    height: 2cm;
     background-color: #023b53;
     color: white;
     text-align: center;
-    line-height: 1.5cm;
+    line-height: 3cm;
 }
 
 footer {
     position: fixed;
     bottom: 0cm;
-    left: 0cm;
-    right: 0cm;
+    left: 1cm;
+    right: 1cm;
     height: 2cm;
     margin-bottom: -35px;
     padding: 12px;
@@ -97,8 +97,9 @@ footer {
 }
 
 .img {
-    max-width: 68px;
-    max-height: 68px;
+    max-width: 70px;
+    max-height: 70px;
+    padding: 2px;
     display: flex;
     justify-content: flex-start;
 }
