@@ -1,17 +1,18 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 1.7cm;
+    margin-top: 1.5cm;
     /*caso queira um header maior é só aumentar o tamanho aqui, e aumentar o heigth do header*/
-    margin-bottom: 0cm;
-    background-color: #26759aeb;
+    margin-bottom: 1.7cm;
+    background-color: #26759a;
     text-align: center;
     padding: 1px;
     border-radius: 0.1cm;
     color: #ffffff;
     font-size: 18.5px;
+    border: 1px solid black;
+    border-radius: 1px;
 }
 
-/*
 footer {
     position: fixed;
     bottom: 0cm;
@@ -23,9 +24,7 @@ footer {
     text-align: right;
     border-top: 1px solid #000000;
     color: black;
-
 }
-*/
 
 .lionel {
     font-size: 22px;
@@ -41,6 +40,8 @@ header {
     color: white;
     text-align: center;
     line-height: 0.7cm;
+    border-radius: 1px;
+    border: 1px solid black;
 }
 
 .messi {
