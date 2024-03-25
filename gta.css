@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 1.5cm;
+    /*caso queira um header maior é só aumentar o tamanho aqui, e aumentar o heigth do header*/
+    margin-bottom: 1.7cm;
+    background-color: rgba(0, 0, 0, 0.849);
+    text-align: center;
+    padding: 1px;
+    border-radius: 1px;
+    color: #ffffff;
+    font-size: 18.5px;
+    border: 1px solid #000000;
+    text-align: justify;
+}
+
+p {
+    margin-left: 1.5cm;
+    margin-right: 1.5cm;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 1.4cm;
+    margin-bottom: -35px;
+    padding: 6px;
+    text-align: right;
+    border-top: 1px solid #000000;
+    color: black;
+}
+
+
+.gta {
+    font-size: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0cm;
+    left: 0cm;
+    right: 0cm;
+    height: 1.8cm;
+    background-color: #065912;
+    color: white;
+    text-align: center;
+    line-height: 0.7cm;
+    border: 1px solid black;
+    border-radius: 1px;
+}
+
+.center {
+    text-align: center;
+}
+
+.imagem {
+    width: 500px;
+    height: 430px;
+    padding: 53px;
+}
