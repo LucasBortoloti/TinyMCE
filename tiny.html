@@ -45,6 +45,37 @@
             editable_class: 'editclass',
             content_css: 'style.css',
 
+            image_title: true,
+            automatic_uploads: true,
+            file_picker_types: 'image',
+            file_picker_callback: function (cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+
+                input.onchange = function () {
+                    var file = this.files[0];
+
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        var id = 'blobid' + (new Date()).getTime();
+                        var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+                        var base64 = reader.result.split(',')[1];
+                        var blobInfo = blobCache.create(id, file, base64);
+                        blobCache.add(blobInfo);
+                        cb(blobInfo.blobUri(), { title: file.name });
+                    };
+                    reader.readAsDataURL(file);
+                };
+
+                input.click();
+            },
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+
+            image_list: [
+                { title: 'GTA V', value: 'https://assets.xboxservices.com/assets/0b/17/0b179504-412d-4af7-9e00-3e3d92633577.jpg?n=GTA-V_GLP-Page-Hero-1084_1920x1080.jpg' }
+            ],
+
             min_height: 900,
             templates: [
                 {
@@ -162,7 +193,7 @@
                         '        <p class="gta"><strong>Grand Theft Auto V</strong></p>' +
                         '    </header>' +
                         '    <footer class="nonedit">GTA V</footer>' +
-                        '    <p><img class="imagem" src="img/gta.jpg" alt="Neymar"></p>' +
+                        '    <p><img class="imagem" src="img/gta.jpg" alt="GTA"></p>' +
                         '    <p><b>Grand Theft Auto V</b>, um dos jogos mais vendidos da hitória, conta a história onde um tratante inexperiente, um ladrão de bancos aposentado e um psicopata aterrorizante se envolvem com algumas das figuras mais assustadoras e problemáticas do submundo do crime, do governo dos EUA e da indústria do entretenimento, eles precisam realizar uma série de golpes ousados para sobreviver em uma cidade implacável onde não podem confiar em ninguém, nem mesmo um no outro.</p>' +
                         '    <br>' +
                         '    <p class="center"> + 195 milhões de vendas</p>' +
