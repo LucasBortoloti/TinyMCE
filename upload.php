@@ -3,12 +3,13 @@
 /***************************************************
  * Only these origins are allowed to upload images *
  ***************************************************/
-$accepted_origins = array("http://localhost:80");
+$accepted_origins = array("http://localhost");
 
 /*********************************************
  * Change this line to set the upload folder *
  *********************************************/
-$imageFolder = "/var/www/html/tiny/img";
+$imageFolder = "assets/images/";
+$name = uniqid();
 
 if (isset($_SERVER['HTTP_ORIGIN'])) {
     // same-origin requests won't set an origin. If the origin is set, it must be valid.
@@ -49,7 +50,8 @@ if (is_uploaded_file($temp['tmp_name'])) {
     }
 
     // Accept upload if there was no origin, or if it is an accepted origin
-    $filetowrite = $imageFolder . $temp['name'];
+    $extension = pathinfo($temp['name'], PATHINFO_EXTENSION);
+    $filetowrite = $imageFolder . $name . "." . $extension;
     move_uploaded_file($temp['tmp_name'], $filetowrite);
 
     // Determine the base URL
@@ -59,7 +61,7 @@ if (is_uploaded_file($temp['tmp_name'])) {
     // Respond to the successful upload with JSON.
     // Use a location key to specify the path to the saved image resource.
     // { location : '/your/uploaded/image/file'}
-    echo json_encode(array('location' => $baseurl . $filetowrite));
+    echo json_encode(array('location' => $filetowrite));
 } else {
     // Notify editor that the upload failed
     header("HTTP/1.1 500 Server Error");
