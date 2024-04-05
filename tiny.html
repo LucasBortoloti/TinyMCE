@@ -83,8 +83,9 @@
 
         tinymce.init({
             selector: "#textarea",
-            plugins: 'autosave preview anchor autolink link fullscreen lists image code advcode mergetags wordcount template table',
-            toolbar: 'undo redo | restoredraft | blocks | bold italic strikethrough backcolor | link image | align bullist numlist | code | template | table | fullscreen',
+            plugins: 'autosave preview anchor autolink link fullscreen lists image code advcode mergetags wordcount template media table help directionality ',
+            toolbar: 'undo redo | restoredraft | blocks | bold italic strikethrough backcolor | link image | align bullist numlist | code | template | media | ltr rtl | table | fullscreen | help',
+            autosave_interval: '30s',
             menubar: true,
             noneditable_class: 'nonedit',
             editable_class: 'editclass',
